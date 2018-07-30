@@ -1,0 +1,48 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700');
+
+* { 
+    font-family: 'Lato', sans-serif;
+    color:#212121;
+}
+
+.header {
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    border-top: solid 10px #d3dc5b;
+}
+
+#logo {
+    justify-content: center;
+    padding: 10px
+}
+
+#top-banner {
+    height: 500px;
+    background-image: url("https://rosemarkcreative.com/wp-content/uploads/2018/07/photo-1453614512568-c4024d13c247.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+} 
+/* Fonts */
+
+H1 {
+   font-size: 30px;
+   letter-spacing: 2px;
+}
+
+H2 {
+    font-size: 25px;
+    letter-spacing: 2px;
+ }
+
+p {
+    font-size: 25px;
+    letter-spacing: .5px;
+}
+body {
+    background: #FAF7F3;
+}
+
