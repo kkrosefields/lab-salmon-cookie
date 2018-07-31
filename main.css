@@ -87,6 +87,13 @@
 #about-image {
     float: left;
     padding: 30px;
+    margin-right: 20px;
+
+}
+
+#about {
+
+  padding-left: 40px;
 
 }
 
