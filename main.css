@@ -12,7 +12,7 @@
     width: 100%;
     display:flex;
     justify-content: center;
-    border-top: solid 10px #d3dc5b;
+    border-top: solid 10px #e76431;
 }
 
 #logo {
@@ -21,26 +21,39 @@
 }
 
 #container {
-    width: 90%;
-    padding:60px
+    width: 900px;
+    padding: 60px;
+    display: flex;
+    margin-top: 40px;
+    margin-left: 200px;
+    background: white;
 }
+
 #top-banner {
-    height: 500px;
+    display: flex;
+    height: 450px;
     background-image: url("https://rosemarkcreative.com/wp-content/uploads/2018/07/photo-1453614512568-c4024d13c247.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    
 } 
+
+#banner-container {
+    justify-content: center;
+    width: 900px;
+    margin-left: 450px;
+    margin-right: 50px;
+}
 
 #banner-cta {
     font-weight: 400;
     background: white;
-    padding: 30px 30px 15px;
+    padding: 15px 30px 15px;
     margin-top: 95px;
     margin-right: 70px;
-    float: right;
     width: 450px;
-    height: 200px; 
+    height: 250px; 
     text-align: center;
 }
 
@@ -63,15 +76,35 @@
 .high-light { 
     font-size: 16px;
     font-weight: 400;
-    background: #e8b238;
+    background: #3f3f3f;
     color: white;
     padding: 5px 10px;
     font-family: serif;
     font-style: italic;
     
 }
-/* Fonts
- */
+
+#about-image {
+    float: left;
+    padding: 30px;
+
+}
+
+/*buttons*/
+
+.btn {	
+    height: 40px;	
+    width: 250px;	
+    border-radius: 22.5px;
+    color: white;
+    font-size: 12px;
+    border:none;
+    background-color: #e8b238;
+    text-transform: uppercase;
+    letter-spacing:2px
+}
+
+/* Fonts*/
 
 H1 {
    font-size: 30px;
@@ -86,11 +119,16 @@ H2 {
  }
 
 p {
-    font-size: 25px;
+    font-size: 18px;
     letter-spacing: .5px;
-    font-weight: 400;
+    font-weight: 300;
 }
 body {
-    background: #FAF7F3;
+    background: #e5d5c440;
 }
-
+footer {
+    background: #43565e;
+    color: white;
+    text-align: center;
+    height: 70;
+    padding: 30px;}
