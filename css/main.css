@@ -263,7 +263,6 @@ footer {
 }
 .table { 
     table-layout: fixed; 
-    width: 850px;
-    margin:30px 190px;
-
+    width: 90%;
+    margin:auto;
 }
