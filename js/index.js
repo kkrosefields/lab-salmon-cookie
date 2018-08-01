@@ -26,7 +26,7 @@
         <td>${store.hours[11]}</td>
         <td>${store.hours[12]}</td>
         <td>${store.hours[13]}</td>
-        <td>${store.hours[13]}</td>
+        <td>${store.total}</td>
     </tr>
     
 
