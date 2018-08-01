@@ -54,7 +54,7 @@
     function getCustomerPerHour(min, max) {
         return Math.random() * (max - min) + min;
     }
-    
+    Math.round()
 
 })(window.module = window.module || {});
 

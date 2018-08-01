@@ -216,31 +216,30 @@ footer {
     border-spacing:0;
     border-color:#ccc;
     margin:0px auto;
+    table-layout: fixed; 
+    width: 90%;
+    margin:auto;
 }
 
 .top-row {
     background-color:#e8b238;
 }
 .table td{
-    font-family:Arial, sans-serif;
+    font-family:sans-serif;
     font-size:14px;
     padding:10px 5px;
     border-style:solid;
     border-width:1px;
-    overflow:hidden;
-    word-break:normal;
     border-color:#ccc;
     color:#333;
     background-color:#fff;
 }
 
-.table th{font-family:Arial, sans-serif;
+.table th{font-family: sans-serif;
     font-size:14px;font-weight:normal;
     padding:10px 5px;
     border-style:solid;
     border-width:1px;
-    overflow:hidden;
-    word-break:normal;
     background-color:#e8b238;
     color:#fff;
 
@@ -260,9 +259,4 @@ footer {
 }
 
 .last-row {width: 170px;
-}
-.table { 
-    table-layout: fixed; 
-    width: 90%;
-    margin:auto;
 }
