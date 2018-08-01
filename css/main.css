@@ -180,9 +180,8 @@ footer {
     font-weight: 400;
     background: white;
     padding: 30px;
-    margin-top: 30px;
-    margin-right: 70px;
-    width: 450px;
+    margin: 0;
+    width: 650px;
     height: 100%;
     text-align: center;
 }

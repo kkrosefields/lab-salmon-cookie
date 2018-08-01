@@ -1,26 +1,26 @@
 'use strict';
 
 (function(module) {
-    var stores = [{
+    let stores = [{
 
         name:'Pike Place Market',
         min:'23',
         max:'65',
-        avg:'6',
+        avg:'6.3',
         key:'pike'
     }, {
 
         name:'SeaTac',
         min:'3',
         max:'24',
-        avg:'1',
+        avg:'1.2',
         key:'seatac',
     }, {
 
         name:'Pike Place Market',
         min:'11',
         max:'38',
-        avg:'3',
+        avg:'3.7',
         key:'seattlecenter'
     }, {
 
@@ -42,19 +42,41 @@
 
     module.stores = stores;
 
-    for(var i = 0; i < stores.length; i++){
+    for(let i = 0; i < stores.length; i++){
         stores[i].hours = [];
-        for(var j = 0; j < 14; j++) {
-            var hour = stores[i].hours;
-            var cookiesPerhour = getCustomerPerHour(stores[i].min, stores[i].max * stores[i].avg);
-            hour.push(cookiesPerhour);
+        for(let j = 0; j < 14; j++) {
+            let hour = stores[i].hours;
+            let cookiesPerhour = getCustomerPerHour(stores[i].min, stores[i].max) * stores[i].avg;
+            hour.push(Math.round(cookiesPerhour));
             //console.log('cookies per hour', cookiesPerhour);
         }
     }
+    for(let i = 0; i < stores.length; i++){
+        stores[i].hours = [];
+        for(let j = 0; j < 14; j++) {
+            let hour = stores[i].hours;
+            let cookiesPerhour = getCustomerPerHour(stores[i].min, stores[i].max) * stores[i].avg;
+            hour.push(Math.round(cookiesPerhour));
+        }  
+       
+    }          
+        
+   
+
     function getCustomerPerHour(min, max) {
-        return Math.random() * (max - min) + min;
+        return Math.floor(Math.random() * (max - min)) + min;       
     }
-    Math.round()
+
+    // let totals = [];
+    // for(let i = 0; i < stores.length; i++){
+    
+    //     for(let j = 0; j < 14; j++) {
+    //         total = total[j].cookiesPerhour[i] = 'finish this later';
+    //     }
+    // }
+    
+    // totals.push(total)
+    
 
 })(window.module = window.module || {});
 
