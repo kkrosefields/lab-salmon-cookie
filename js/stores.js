@@ -80,7 +80,7 @@
         hourlyStoreTotals.push(total);
         console.log('push', hourlyStoreTotals);  
     }
-
+    
 
     function getRandomNum(min, max) {
         return Math.random() * (max - min) + min;       

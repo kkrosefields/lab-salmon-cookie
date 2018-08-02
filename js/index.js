@@ -31,6 +31,7 @@
         <td>${store.cookiesPerHour[12]}</td>
         <td>${store.cookiesPerHour[13]}</td>
         <td>${store.total}</td>
+        <td>${store.totalsRow}</td>
     
     </tr> 
     
