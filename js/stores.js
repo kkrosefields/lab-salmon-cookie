@@ -46,42 +46,41 @@
     }];
 
     module.stores = stores;
-    //cookies per hour
+    //array cookies per hour
     for(let i = 0; i < stores.length; i++){
-        stores[i].cookiesPerHour = 0;
+        stores[i].cookiesPerHour = [];
         for(let j = 0; j < 14; j++) {
-            // let cookiesPerhourPerStore = stores[i].hours;
-            let tempCookiesPerHour = getCustomerPerHour(stores[i].min, stores[i].max);
-    
-            stores[i].cookiesPerHour += (Math.round(tempCookiesPerHour));
+            // let cookiesPerhourPerStore = stores[i].cookiesPerHour;
+            let tempCookiesPerHour = getCustomerPerHour(stores[i].min, stores[i].max) * stores[i].avg;
+            // console.log ('cookies average!!!', tempCookiesPerHour);
+            stores[i].cookiesPerHour.push(Math.round(tempCookiesPerHour));
             // console.log('cookies per hour', stores[i].cookiesPerHour);
         }
     }
 
+
     for(let i = 0; i < stores.length; i++){
         console.log ('before', stores[i].total); 
         for(let j = 0; j < 14; j++) {
-            stores[i].total += stores[i].hours[j];
+            stores[i].total += stores[i].cookiesPerHour[j];
 
         }  
-        console.log ('after', stores[i].total);  
-    }   
-    
-    for(let i = 0; i < stores.length; i++){
-        console.log ('before', stores[i].total); 
-        for(let j = 0; j < 14; j++) {
-            stores[i].total += stores[i].hours[j];
+        //console.log ('after', stores[i].total);  
+    }  
 
-        }  
-   
-    }   
+    //total by hour
+    let hourlyStoreTotals = [];
+    for(let i = 0; i < 14; i++){
+        let total = 0;
 
-    for(let i = 0; i < stores.length; i++){
-        let hourlyStoreTotals = store.name[i].hourly;
-        for(let j = 0; j < 4; j++) 
+        for(let j = 0; j < stores.length; j++) {
+            total += stores[j].cookiesPerHour[i];
+        } 
+        
+        hourlyStoreTotals.push(total);
+        console.log('push', hourlyStoreTotals);  
+    }
 
-            console.log ('after', stores[i].total);  
-    }   
 
     function getRandomNum(min, max) {
         return Math.random() * (max - min) + min;       
@@ -89,13 +88,12 @@
 
     function getCustomerPerHour(custMin, custMax){
         var customerPerHour = getRandomNum(custMin, custMax);
-        console.log ('customer Per hour', customerPerHour);
-    
+        return customerPerHour;
     }
 
+    module.hourlyStoreTotals = hourlyStoreTotals;
+    
 
-    
-    
 
 })(window.module = window.module || {});
 
