@@ -46,15 +46,13 @@
     }];
 
     module.stores = stores;
-    //array cookies per hour
     for(let i = 0; i < stores.length; i++){
         stores[i].cookiesPerHour = [];
         for(let j = 0; j < 14; j++) {
-            // let cookiesPerhourPerStore = stores[i].cookiesPerHour;
+            
             let tempCookiesPerHour = getCustomerPerHour(stores[i].min, stores[i].max) * stores[i].avg;
-            // console.log ('cookies average!!!', tempCookiesPerHour);
             stores[i].cookiesPerHour.push(Math.round(tempCookiesPerHour));
-            // console.log('cookies per hour', stores[i].cookiesPerHour);
+            
         }
     }
 
@@ -65,10 +63,9 @@
             stores[i].total += stores[i].cookiesPerHour[j];
 
         }  
-        //console.log ('after', stores[i].total);  
+  
     }  
 
-    //total by hour
     let hourlyStoreTotals = [];
     for(let i = 0; i < 14; i++){
         let total = 0;
